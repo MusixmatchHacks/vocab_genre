@@ -7,7 +7,9 @@
     "d3": "~3.5.9",
     "bootstrap-material-design": "~0.3.0",
     "social-share-kit": "~1.0.6",
-    "disqus-thread": "~0.0.1"
+    "disqus-thread": "~0.0.1",
+    "datatables.net": "~1.10.10",
+    "datatables.net-dt": "~1.10.9"
   },
   "overrides": {
     "bootstrap": {
@@ -16,6 +18,11 @@
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js",
         "dist/fonts/*"
+      ]
+    },
+    "masonry": {
+      "main": [
+        "dist/masonry.pkgd.js"
       ]
     }
   },

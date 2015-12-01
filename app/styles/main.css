@@ -9,7 +9,7 @@
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
   font-family: "Karla", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 body, html {
   height: 100%;
@@ -38,7 +38,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Make the masthead heading the same height as the navigation */
+/* Make the masthead hrticeading the same height as the navigation */
 
 .header h3 {
   margin-top: 0;
@@ -63,6 +63,8 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  color: white;
+  box-shadow: none!important;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -77,48 +79,34 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
-
-/* Responsive: Portrait tablets and up */
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-  /* Remove the padding we set earlier */
-  .header, .marketing, .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
 #title {
   background-image: url('../images/header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.jumbotron {
-  color: white;
-  height: 430px;
-}
 .jumbotron h1 {
-  font-weight: bolder;
+  font-weight: 700;
+  font-size: 35px;
 }
 #title_text h1 {
   /*color: white;*/
   /*font-weight: bolder;*/
 }
 #title_text {}
-p.article {
+.heading_describe {
   /*width: 80%;*/
   /*text-align: center;*/
-  margin: auto;
+  margin: 20px auto 0px auto;
+}
+.sub_heading_describe {
+  /*width: 80%;*/
+  /*text-align: center;*/
+  margin: 20px auto 10px auto;
+}
+.sub_heading_end {
+  /*width: 80%;*/
+  /*text-align: center;*/
+  margin: 30px auto 50px auto;
 }
 
 /*google-chart {
@@ -131,6 +119,7 @@ section {
   /*margin: 0 0 20px;*/
   /*font-size: 17.5px;*/
   /*border-left: 5px solid #eee;*/
+  margin-top: 100px;
 }
 
 /*@media (min-width: 1200px) {
@@ -156,8 +145,8 @@ section {
   max-height: 150px;
 }
 .article h1 {
-  margin-bottom: 15px;
-  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-top: 30px;
 }
 .article h2 {
   margin-top: 30px;
@@ -167,14 +156,14 @@ section {
   text-align: center;
 }
 .article {
-  width: 960px;
+  width: 660px;
   margin: 0 auto;
-  padding: 30px 20px 30px 20px;
-  font-size: 20px;
+  padding: 0px 20px 30px 20px;
+  /*font-size: 20px;*/
   color: #303030;
   line-height: 25px;
   font-size: 1.33em;
-  text-align: justify;
+  text-align: left;
   margin-bottom: 20px;
 }
 img {
@@ -182,9 +171,8 @@ img {
   width: auto;
   max-width: 100%;
   max-height: 1200px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-top: 30px;
-
   /*margin-right: auto;*/
   /*display: block;*/
   /*position: relative;*/
@@ -192,7 +180,7 @@ img {
   /*right: auto;*/
   /*left:auto;*/
 }
-.word_freq{
+.word_freq {
   max-width: 110%;
   margin-left: -5%;
 }
@@ -212,6 +200,9 @@ section blockquote {
 #left {
   margin-right: 1%;
 }
+section a, a:hover, a:focus {
+  color: #ff6633;
+}
 
 /*section h1:after {
   display: block;
@@ -229,8 +220,9 @@ h1.heading {
   position: relative;
   /*display: block;*/
   /*width: 100%;*/
-  margin-top: 65px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bolder;
 }
 h1.heading span {
   display: inline-block;
@@ -240,21 +232,23 @@ h1.heading span {
   z-index: 7;
   position: relative;
 }
-.heading:before {
-  display: block;
+.heading:after {
+  display: none;
   position: absolute;
-  top: 50%;
-  left: 0;
+  bottom: -24%;
   content: "";
-  width: 100%;
-  height: 3px;
+  width: 5%;
+  height: 4px;
   background-color: #303030;
+  margin-left: 47.5%;
+  margin-right: 47.5%;
   /*background-color: white;*/
 }
 h3.sub_heading {
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-weight: bolder;
 }
 h3.sub_heading span {
   display: inline-block;
@@ -265,19 +259,21 @@ h3.sub_heading span {
   position: relative;
   /*text-align: center;*/
 }
-.sub_heading:before {
-  display: block;
+.sub_heading:after {
+  display: none;
   position: absolute;
-  top: 50%;
-  left: 0;
+  bottom: -57%;
+  /*left: 0;*/
   content: "";
-  width: 100%;
-  height: 1px;
+  width: 2.5%;
+  height: 2px;
   background-color: #303030;
-
+  margin-left: 49.25%;
+  margin-right: 49.25%;
 }
 .social {
   text-align: center;
+  margin: 40px;
 }
 em a {
   color: mistyrose;
@@ -289,30 +285,6 @@ em a:hover {
   /*margin-top: 35px;*/
 }
 
-@media screen and (max-width: 959px)  {
-  .article {
-    width: 90%;
-  }
-  img {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .lyrics{
-    display: block;
-    width: 90%;
-  }
-  .word_freq{
-    max-width: 110%;
-    margin-left: -5%;
-  }
-
-  /*#title {
-
-    background-repeat: no-repeat;
-    /*background-size: cover;*/
-  /*}*/
-
-}
 /*@media screen and (max-width: 479px) and (min-width: 320px) {
   .article {
     width: 300px;
@@ -337,3 +309,179 @@ em a:hover {
     max-width: 700px;
   }
 }*/
+
+.comparison {
+  /*display: inline;*/
+  width: 90%;
+}
+
+/*.insight{
+  margin-left: 5%;
+  margin-right: 5%;
+  font-style: italic;
+  color: rgba(0,0,0,0.6);
+  font-size: 1.34em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}*/
+
+.insight {
+  font-style: italic;
+  font-family: serif;
+  /* color: rgba(0,0,0,.6); */
+  font-size: 1.33em;
+  /*font-family: serif;*/
+  /* margin: 10px 5% 20px; */
+  /* font-weight: 600; */
+  line-height: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 0;
+  margin-right: 5%;
+  border-left: 1px solid black;
+  padding-left: 5%;
+}
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (max-width: 959px) {
+  .article {
+    width: 90%;
+  }
+  img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .sub_heading:after {
+    bottom: -20%;
+  }
+  .heading:after {
+    bottom: -10%;
+  }
+  /*#all_artists_genre {
+    width: 100%;
+    /*margin-left: -20%;*/
+  /*}*/
+  /*#title {
+
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+  /*}*/
+  .small-img {
+    width: 100%;
+  }
+  #all_artists_genre {
+    overflow: auto;
+  }
+  #all_artists_genre > table {
+    table-layout: fixed;
+  }
+}
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 730px;
+  }
+  /* Remove the padding we set earlier */
+  .header, .marketing, .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+    height: 530px;
+  }
+  .jumbotron h1 {
+    font-size: 50px;
+    margin-top: 100px;
+  }
+  .sub_heading:after {
+    bottom: -60%;
+  }
+  .heading:after {
+    bottom: -50%;
+  }
+  img {
+    max-width: 150%;
+    margin-left: -25%;
+  }
+  .small-img {
+    width: 100%;
+    /*margin-left: -5%;*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#date_info {
+  font-size: .8em;
+  /*margin-bottom: 5px;*/
+  margin-top: .25%;
+}
+.insight_sub_end {
+  margin-bottom: 50px;
+}
+.credits {
+  margin-top: 150px;
+  margin-bottom: 10px;
+}
+#logo img {
+  height: auto;
+  max-width: 100%;
+  margin-left: 0;
+  max-width: 200px;
+  max-height: 150px;
+}
+.first_section {
+  margin-top: 0;
+}
+.genre {
+  width: 100%;
+}
+.genre img {
+  /*display: ;*/
+  max-width: 100%;
+}
+
+/*.grid-sizer,
+.grid-item {
+  width: 20%;
+}*/
+
+.row.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutter > [class*='col-'] {
+  padding-right: 5px;
+  padding-left: 0;
+}
+.comp img {
+  margin: 5px 0px 0px 0px;
+}
+#all_artists_genre {
+  /*overflow: auto;*/
+  font-size: .7em;
+  /*width: 100%;*/
+  /*margin-left: -2.5%;*/
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+#all_artists_genre > table {
+  /*table-layout: fixed;*/
+
+}
+
+.figure-title{
+  font-size: 1em;
+  text-align: center;
+  color: #8b8b8b;
+  margin-bottom: 30px;
+}
+#rep_artists_title{
+  margin-top:30px;
+  margin-bottom: 10px;
+}
